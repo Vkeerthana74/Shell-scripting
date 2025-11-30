@@ -66,6 +66,7 @@ Works on Linux machines (Ubuntu/Debian)
 Designed for repeated automation using cron
 
 output images:
+
 <img width="940" height="201" alt="image" src="https://github.com/user-attachments/assets/80b11db5-cc6d-49de-8f9f-2a6f742c1183" />
 <img width="940" height="342" alt="image" src="https://github.com/user-attachments/assets/9f1f51a6-0026-42c8-8b62-8e42b09a141a" />
 <img width="940" height="394" alt="image" src="https://github.com/user-attachments/assets/763c5e21-ffae-489e-9bf2-1c2c640a17ab" />
