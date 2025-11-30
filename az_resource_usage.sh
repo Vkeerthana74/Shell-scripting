@@ -75,3 +75,9 @@ az vm list
 echo "list of Entra Users"
 az ad user list --output table
                                            
+# to add a cron job 
+# chmod +x /home/keerthana/azure_resource_usage.sh
+#crontab -e -> Choose nano editor if asked.
+# run every 5 min - */5 * * * * /home/keerthana/azure_usage.sh >> /home/keerthana/azure_usage.log 2>&1
+# grep CRON /var/log/syslog | tail -n 20 -> shows cron jobs
+
