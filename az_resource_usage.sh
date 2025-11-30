@@ -14,7 +14,7 @@ set -o pipefail
 echo "🔍 Checking if Azure CLI is installed in linux machine..."
 
 # Check only Linux installation, ignore Windows az under /mnt/c
-if [ ! -f "/usr/bin/az" ]; then
+if ! command -v az >/dev/null 2>&1; then
     echo "❌ Azure CLI NOT installed in linux. Installing Azure CLI..."
 
     # Update packages
