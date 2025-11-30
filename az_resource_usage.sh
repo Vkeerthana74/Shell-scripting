@@ -1,26 +1,26 @@
 #!/bin/bash
 
 #######Metadata########
-#This shellscript will display azure resource usage(vm,blob storage,finctions,Entra users)
+#This shellscript will display azure resource usage(nsg,vnet,vms,Entra users)
 #author: keerthana
 #version: v0.0.1
 #######################
 
 set -x
 set -e
-set -o
+set -o pipefail
 # list blobs
-echo "list of Blobs"
-az storage blob list
+echo "list of nsg"
+az network nsg list
+
+#list vnet
+echo "list of vnets"
+az network vnet list
 
 #list vms
 echo "list of vms"
 az vm list
 
-#list functions
-echo "list of Functions"
-az functionapp function list
-
 #list Entra users
 echo "list of Entra Users"
-az ad user list
+az ad user list --output table
