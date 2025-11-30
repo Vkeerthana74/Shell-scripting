@@ -11,11 +11,11 @@ set -x
 set -e
 set -o pipefail
 
-echo "🔍 Checking if Azure CLI is installed in linux machine..."
+echo "Checking if Azure CLI is installed in linux machine..."
 
 # Check only Linux installation, ignore Windows az under /mnt/c
 if ! command -v az >/dev/null 2>&1; then
-    echo "❌ Azure CLI NOT installed in linux. Installing Azure CLI..."
+    echo "Azure CLI NOT installed in linux. Installing Azure CLI..."
 
     # Update packages
     sudo apt update -y
@@ -40,21 +40,21 @@ https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" |
     sudo apt update -y
     sudo apt install azure-cli -y
 
-    echo "✅ Azure CLI installed successfully in Linux!"
+    echo "Azure CLI installed successfully in Linux!"
 else
     echo "  Azure CLI already installed in linux at /usr/bin/az"
 fi
 
-echo "🔧 Configuring Azure CLI..."
+echo " Configuring Azure CLI..."
 
 # Log in to Azure
-echo "📢 Opening browser for Azure login..."
+echo "Opening browser for Azure login..."
 az login --use-device-code
 
 # Set default output format (optional)
 az config set core.output=table
 
-echo "🎉 Azure CLI setup completed successfully!"
+echo "Azure CLI setup completed successfully!"
 # list resource groups
 echo "list of Resource group"
 az group list
